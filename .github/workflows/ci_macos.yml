@@ -54,7 +54,7 @@ jobs:
           echo "C_INCLUDE_PATH=/usr/local/lib:/usr/local/opt/openssl/include" >> $GITHUB_ENV
           echo "LIBRARY_PATH=/usr/local/lib" >> $GITHUB_ENV
           LIBPNG_VERSION=$(pkg-config --modversion libpng)
-          echo "LIBPNG_VERSION=${LIBPNG_VERSION} >> $GITHUB_ENV
+          echo "LIBPNG_VERSION=${LIBPNG_VERSION}" >> $GITHUB_ENV
           pkg-config --libs --cflags libpng
           pkg-config --libs libpng
           pkg-config --libs --cflags libpng16
