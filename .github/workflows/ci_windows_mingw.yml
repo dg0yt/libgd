@@ -64,10 +64,10 @@ jobs:
           ninja:p
 
     - name: 'setup-msys test'
-      shell: bash
       run: |
-        which cmake
+        which cmake || set
         env | sort
+        exit
 
     - name: '🚧 Cmake Configure'
       run:  |
