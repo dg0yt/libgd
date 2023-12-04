@@ -63,6 +63,12 @@ jobs:
           cmake:p
           ninja:p
 
+    - name: 'setup-msys test'
+      shell: bash
+      run: |
+        which cmake
+        env | sort
+
     - name: '🚧 Cmake Configure'
       run:  |
           cmake -DCMAKE_BUILD_TYPE=${{env.BUILD_TYPE}} -DENABLE_PNG=1 -DENABLE_FREETYPE=1 -DENABLE_XPM=1 -DENABLE_JPEG=1 -DENABLE_WEBP=1 -DENABLE_TIFF=1 -DENABLE_GD_FORMATS=1 -DENABLE_HEIF=1 -DENABLE_RAQM=1 -DENABLE_ICONV=1 -DENABLE_CPP=1 -DBUILD_TEST=1 -B.
